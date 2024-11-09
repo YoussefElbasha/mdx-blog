@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .classyclass {
+    @apply flex flex-col gap-4 font-inter leading-7;
+  }
+
+  .classyclass > h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  .classyclass > p {
+    @apply text-base font-normal;
+  }
+
+  .classyclass > * > a {
+    @apply underline font-semibold;
+  }
+
+  .classyclass > * > em {
+    @apply underline font-semibold italic;
+  }
+
+  .classyclass > p > code {
+    @apply bg-gray-800 text-[#ffffff] px-1 rounded-sm;
+  }
+  .classyclass > pre {
+    @apply p-4 text-white bg-gray-800 rounded-lg;
+  }
+  /* .classyclass > pre > code {
+    @apply p-0 bg-transparent text-inherit;
+  } */
+
+  .classyclass > * > img {
+    @apply py-4 mx-auto rounded-[2.25rem] w-full;
+  }
+}
