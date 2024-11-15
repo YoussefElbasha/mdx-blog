@@ -9,10 +9,7 @@ import rehypeSlug from 'rehype-slug'
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug
 
-  const file = await fs.readFile(
-    process.cwd() + `/src/blogs/${slug}.md`,
-    'utf8'
-  )
+  const file = await fs.readFile(process.cwd() + `/src/blogs/${slug}`, 'utf8')
 
   const matterResult = matter(file)
 
@@ -21,7 +18,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const headings = matterResult.content.match(h2Pattern)
 
   return (
-    <div className=''>
+    <div className='flex flex-col justify-center items-center '>
       <MobileTableOfContents headings={headings} />
       {matterResult.data.title && (
         <h1 className='text-4xl text-center font-semibold lg:mb-11 mb-8'>
