@@ -7,7 +7,11 @@ const Home = async () => {
   return (
     <div className='flex flex-col justify-start items-center'>
       {blogs.map((blog: string) => {
-        return <Link href={`/blog/${blog}`}>{blog}</Link>
+        return (
+          <Link href={`/blog/${blog}`} key={blog}>
+            {blog}
+          </Link>
+        )
       })}
     </div>
   )
