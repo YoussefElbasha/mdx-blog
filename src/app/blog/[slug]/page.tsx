@@ -18,7 +18,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const url =
     process.env.NODE_ENV === 'development'
       ? `/src/blogs/${slug}`
-      : `/blogs/${slug}`
+      : `blogs/${slug}`
+
+  console.log(process.cwd() + url)
+
   const file = await fs.readFile(process.cwd() + url, 'utf8')
   // const file = await generateStaticParams(slug)
 
