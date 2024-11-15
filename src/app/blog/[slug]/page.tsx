@@ -6,12 +6,6 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 import rehypeSlug from 'rehype-slug'
 
-// async function generateStaticParams(slug: string) {
-//   const file = await fs.readFile(process.cwd() + `/blogs/${slug}`, 'utf8')
-
-//   return file
-// }
-
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug
 
@@ -23,7 +17,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   console.log(process.cwd() + url)
 
   const file = await fs.readFile(process.cwd() + url, 'utf8')
-  // const file = await generateStaticParams(slug)
 
   const matterResult = matter(file)
 
