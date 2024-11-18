@@ -1,5 +1,5 @@
 ---
-title: npm audit: Broken by Design
+title: npm audit\: Broken by Design
 createdAt: 10-29-2024
 ---
 
