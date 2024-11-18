@@ -9,10 +9,12 @@ import rehypeSlug from 'rehype-slug'
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug
 
-  const url =
-    process.env.NODE_ENV === 'development'
-      ? `/src/blogs/${slug}`
-      : `/src/blogs/${slug}`
+  // const url =
+  //   process.env.NODE_ENV === 'development'
+  //     ? `/src/blogs/${slug}`
+  //     : `/src/blogs/${slug}`
+
+  const url = `/src/blogs/${slug}`
 
   console.log(process.cwd() + url)
 
