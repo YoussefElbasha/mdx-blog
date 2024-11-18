@@ -12,7 +12,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const url =
     process.env.NODE_ENV === 'development'
       ? `/src/blogs/${slug}`
-      : `/blogs/${slug}`
+      : `/.next/server/blogs/${slug}`
 
   console.log(process.cwd() + url)
 
